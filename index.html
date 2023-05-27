@@ -8,11 +8,52 @@
     <link rel="stylesheet" href="./css/estilos.css" />
     <link rel="stylesheet" href="./css/skins/color-1.css" />
     <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <!--=========== Style Switcher ==========-->
+    <link
+      rel="stylesheet"
+      href="css/skins/color-1.css"
+      class="alternate-style"
+      title="color-1"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="css/skins/color-2.css"
+      class="alternate-style"
+      title="color-2"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="css/skins/color-3.css"
+      class="alternate-style"
+      title="color-3"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="css/skins/color-4.css"
+      class="alternate-style"
+      title="color-4"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="css/skins/color-5.css"
+      class="alternate-style"
+      title="color-5"
+      disabled
+    />
   </head>
-  <body>
+  <link rel="stylesheet" href="./css/style-switcher.css" />
+  <body onload="location='#inicio';">
     <!--==== Main container start =====-->
     <div class="main-container">
       <!--==== aside start =====-->
@@ -23,16 +64,22 @@
         <div class="nav-toggler"><span></span></div>
         <ul class="nav">
           <li>
-            <a href="#" class="active"><i class="fa fa-home"></i>Inicio</a>
+            <a href="#inicio" class="links"><i class="fa fa-home"></i>Inicio</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-user"></i>Sobre Mi</a>
+            <a href="#about-me" class="links"
+              ><i class="fa fa-user"></i>Sobre Mi</a
+            >
           </li>
           <li>
-            <a href="#"><i class="fa fa-briefcase"></i>Proyectos</a>
+            <a href="#proyect" class="links"
+              ><i class="fa fa-briefcase"></i>Proyectos</a
+            >
           </li>
           <li>
-            <a href="#"><i class="fa fa-comments"></i>contacto</a>
+            <a href="#contact" class="links"
+              ><i class="fa fa-comments"></i>contacto</a
+            >
           </li>
         </ul>
       </div>
@@ -40,12 +87,223 @@
       <!--==== Main content start =====-->
       <div class="main-content">
         <!--==== home section start =====-->
-        <section class="home section">home</section>
+        <section class="home section" id="inicio">
+          <div class="container">
+            <div class="row">
+              <div class="home-info padd-15">
+                <h3 class="hello">
+                  Hello, Mi name is <span class="name">Gabriel Flores</span>
+                </h3>
+                <h3 class="my-profesion">
+                  Yo soy <span class="typing">Desarrollador Web</span>
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Atque repudiandae eius nobis mollitia explicabo laborum amet
+                </p>
+                <div class="social-media">
+                  <a
+                    href="https://www.facebook.com/gabriel.flores.54943600"
+                    target="_blank"
+                    rel="no-referrer"
+                    ><i class="bx bxl-facebook"></i
+                  ></a>
+                  <a
+                    href="https://www.instagram.com/floresmamanigabriel/"
+                    target="_blank"
+                    rel="no-referrer"
+                    ><i class="bx bxl-instagram-alt"></i
+                  ></a>
+                  <a
+                    href="https://www.linkedin.com/in/gabriel-floresdev/"
+                    target="_blank"
+                    rel="no-referrer"
+                    ><i class="bx bxl-linkedin"></i
+                  ></a>
+                  <a
+                    href="https://github.com/24Gabriel"
+                    target="_blank"
+                    rel="no-referrer"
+                    ><i class="bx bxl-github"></i
+                  ></a>
+                </div>
+                <a href="#about-me" class="btn hire-me">Sobre mi</a>
+              </div>
+              <div class="home-img padd-15">
+                <img src="./imagenes/img-perfil.jpeg" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
         <!--==== home section end =====-->
+        <!--==== about section start =====-->
+        <section class="about section" id="about-me">
+          <div class="container">
+            <div class="row">
+              <div class="section-title padd-15">
+                <h2>About me</h2>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--==== about section end =====-->
+        <!--==== proyect section start =====-->
+        <section class="about section" id="proyect">
+          <div class="container">
+            <div class="row">
+              <div class="section-title padd-15">
+                <h2>Proyectos</h2>
+                <div class="portfolio-gallery">
+                  <div class="port-box">
+                    <div class="port-image">
+                      <img
+                        src="/imagenes/personas-programando-1.jpg"
+                        alt="item-1"
+                      />
+                    </div>
+                    <div class="port-content">
+                      <h3>Titulo card</h3>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Debitis, distinctio est consequatur voluptatum vel
+                      </p>
+                      <div class="link-card">
+                        <a href="#"><i class="bx bx-link-external"></i></a>
+                        <a
+                          href="https://github.com/24Gabriel"
+                          target="_blank"
+                          rel="no-referrer"
+                          ><i class="bx bxl-github"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="port-box">
+                    <div class="port-image">
+                      <img
+                        src="/imagenes/personas-programando-2.jpeg"
+                        alt="item-1"
+                      />
+                    </div>
+                    <div class="port-content">
+                      <h3>Titulo card</h3>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Debitis, distinctio est consequatur voluptatum vel
+                      </p>
+                      <a href="#"><li class="bx bx-link-external"></li></a>
+                    </div>
+                  </div>
+                  <div class="port-box">
+                    <div class="port-image">
+                      <img
+                        src="/imagenes/personas-programando-3.jpg"
+                        alt="item-1"
+                      />
+                    </div>
+                    <div class="port-content">
+                      <h3>Titulo card</h3>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Debitis, distinctio est consequatur voluptatum vel
+                      </p>
+                      <a href="#"><li class="bx bx-link-external"></li></a>
+                    </div>
+                  </div>
+                  <div class="port-box">
+                    <div class="port-image">
+                      <img
+                        src="/imagenes/personas-programando-4.jpg"
+                        alt="item-1"
+                      />
+                    </div>
+                    <div class="port-content">
+                      <h3>Titulo card</h3>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Debitis, distinctio est consequatur voluptatum vel
+                      </p>
+                      <a href="#"><li class="bx bx-link-external"></li></a>
+                    </div>
+                  </div>
+                  <div class="port-box">
+                    <div class="port-image">
+                      <img
+                        src="/imagenes/personas-programando-5.jpg"
+                        alt="item-1"
+                      />
+                    </div>
+                    <div class="port-content">
+                      <h3>Titulo card</h3>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Debitis, distinctio est consequatur voluptatum vel
+                      </p>
+                      <a href="#"><li class="bx bx-link-external"></li></a>
+                    </div>
+                  </div>
+                  <div class="port-box">
+                    <div class="port-image">
+                      <img
+                        src="/imagenes/personas-programando-6.jpg"
+                        alt="item-1"
+                      />
+                    </div>
+                    <div class="port-content">
+                      <h3>Titulo card</h3>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Debitis, distinctio est consequatur voluptatum vel
+                      </p>
+                      <a href="#"><li class="bx bx-link-external"></li></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--==== proyect section end =====-->
+        <!--==== contact section start =====-->
+        <section class="about section" id="contact">
+          <div class="container">
+            <div class="row">
+              <div class="section-title padd-15">
+                <h2>Contactame</h2>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--==== contact section end =====-->
       </div>
       <!--==== Main content end =====-->
     </div>
     <!--==== Main container start =====-->
-    <script src="./js/index.js"></script>
+    <!--==== Style Switcher start =====-->
+    <div class="style-switcher">
+      <div class="style-switcher-toggler s-icon">
+        <i class="fas fa-cog fa-spin"></i>
+      </div>
+      <div class="day-night s-icon">
+        <i class="fas"></i>
+      </div>
+      <h4>theme colors</h4>
+      <div class="colors">
+        <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+        <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+        <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+        <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+        <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+      </div>
+    </div>
+    <!--==== Style Switcher end =====-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js"
+      integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./js/index.js" async></script>
+    <script src="js/style-switcher.js"></script>
   </body>
 </html>
