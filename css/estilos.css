@@ -127,7 +127,7 @@ ul {
 }
 .aside .logo {
   position: absolute;
-  top: 50px;
+  top: 85px;
   font-size: 30px;
   text-transform: capitalize;
 }
@@ -168,7 +168,7 @@ ul {
   border: 1px solid var(--bg-black-50);
   cursor: pointer;
   position: fixed;
-  left: 300px;
+  left: 20px;
   top: 20px;
   border-radius: 5px;
   background: var(--bg-black-100);
@@ -183,6 +183,9 @@ ul {
   display: inline-block;
   position: relative;
 }
+.aside .nav-toggler.open span {
+  background-color: transparent;
+}
 .aside .nav-toggler span::before {
   content: "";
   height: 2px;
@@ -192,6 +195,10 @@ ul {
   top: -6px;
   left: 0;
 }
+.aside .nav-toggler.open span::before {
+  transform: rotate(45deg);
+  top: 0;
+}
 .aside .nav-toggler span::after {
   content: "";
   height: 2px;
@@ -200,6 +207,10 @@ ul {
   position: absolute;
   top: 6px;
   left: 0;
+}
+.aside .nav-toggler.open span::after {
+  transform: rotate(-45deg);
+  top: 0;
 }
 .aside .nav {
   margin-top: 50px;
@@ -269,7 +280,9 @@ h3.my-profession {
   margin: auto;
   border-radius: 15px;
   height: 400px;
-  box-shadow: 0 0 1rem var(--skin-color);
+  box-shadow: 0 0 1rem #657677;
+  transition: 0.5s;
+  text-shadow: 0 0 1rem #657677;
 }
 /*-------------Proyectos-------------*/
 .social-media a {
@@ -283,18 +296,19 @@ h3.my-profession {
   border-radius: 50%;
   font-size: 1.5rem;
   color: var(--skin-color);
-  margin: 3rem 1.5rem 3rem 0;
+  margin: 1.5rem 1.5rem 1.5rem 0;
 }
 .social-media a:hover {
+  box-shadow: 0 0 1rem var(--skin-color);
   background: var(--skin-color);
   color: white;
-  box-shadow: 0 0 0.1rem var(--skin-color);
+  transition: 0.5s;
 }
 .portfolio-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   gap: 4rem;
-  margin-top: 30px;
+  margin-top: 15%;
 }
 .port-box {
   position: relative;
@@ -307,6 +321,7 @@ h3.my-profession {
   border: 2px solid #657677;
   box-shadow: 0 0 1rem #657677;
   height: 235px;
+  width: 320px;
 }
 .port-image {
   display: flex;
@@ -342,9 +357,7 @@ h3.my-profession {
   font-weight: 600;
   color: #fff;
 }
-.port-content:hover {
-  opacity: 1;
-}
+
 .port-content p {
   font-size: 0.8rem;
   margin: 5px 0 15px 0;
@@ -357,8 +370,60 @@ h3.my-profession {
   width: 3rem;
   height: 3rem;
   background: transparent;
-  border: 0.2rem solid var(--skin-color);
+  border: 0.2rem solid #657677;
   border-radius: 50%;
   font-size: 1.5rem;
-  color: var(--skin-color);
+  color: #657677;
+}
+.port-content a:hover {
+  box-shadow: 0 0 1rem #657677;
+  transition: 0.5s;
+  text-shadow: 0 0 1rem #657677;
+}
+.port-box:hover .port-content {
+  opacity: 1;
+}
+.port-box:hover .port-image img {
+  transform: scale(1.1);
+}
+.link-card {
+  display: inline-flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+/*-----Responsive-----*/
+@media (max-width: 1199px) {
+  .aside,
+  .aside.open,
+  .aside .nav-toggler,
+  .aside .nav-toggler.open {
+    transition: all 0.5s ease;
+  }
+  .aside {
+    left: -270px;
+  }
+  .aside.open {
+    left: 0;
+  }
+  .aside .nav-toggler {
+    display: flex;
+  }
+  .aside .nav-toggler.open {
+    left: 195px;
+  }
+  .main-content {
+    padding-left: 0;
+  }
+}
+@media (max-width: 991px) {
+  .home .home-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .home .home-img {
+    display: none;
+  }
+  .port-content {
+    opacity: 1;
+  }
 }

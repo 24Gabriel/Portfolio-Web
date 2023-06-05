@@ -13,4 +13,13 @@ var typed = new Typed(".typing", {
   BackSpeed: 80,
   loop: true,
 });
-/*----------------- Prueba--------------*/
+/*---------------Nav toggler--------------*/
+const navToggler = document.querySelector(".nav-toggler"),
+  aside = document.querySelector(".aside");
+navToggler.addEventListener("click", () => {
+  asideSectionTogglerBtn();
+});
+function asideSectionTogglerBtn() {
+  aside.classList.toggle("open");
+  navToggler.classList.toggle("open");
+}
